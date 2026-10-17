@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.tsbuildinfo
+tmp-reference/
+.DS_Store
+# Local scratch folder, not part of the project.
+data/

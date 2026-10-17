@@ -1,0 +1,44 @@
+{
+  "name": "otomoto-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MCP server for searching car listings on Otomoto.pl",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flopsstuff/otomoto-mcp.git"
+  },
+  "homepage": "https://github.com/Flopsstuff/otomoto-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/Flopsstuff/otomoto-mcp/issues"
+  },
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "otomoto-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && chmod +x dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "smoke": "node scripts/smoke.ts",
+    "capture-fixtures": "node scripts/capture-fixtures.ts",
+    "generate-vocabulary": "node scripts/generate-filter-vocabulary.ts",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
